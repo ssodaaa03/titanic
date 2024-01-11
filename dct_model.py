@@ -25,6 +25,8 @@ sns.heatmap(data.isna(), cbar = False)
 
 # convert sex column to is male >> 1 = male, 0 = female
 
+import numpy as np
+
 data.rename(columns = {'Sex' : 'is male'}, inplace = True)
 data['is male'] = np.where(data['is male'] == 'male', 1, 0)
 
